@@ -20,10 +20,10 @@ import com.example.purchases.entities.entitites.ShoppingListName
 )
 
 abstract class MainDataBase : RoomDatabase(){
+    abstract fun getDao():Dao
     companion object{
         @Volatile
         private var INSTANCE: MainDataBase? = null
-
         fun getDataBase(context: Context): MainDataBase{
             return INSTANCE?: synchronized(this){
                 val instance = Room.databaseBuilder(
