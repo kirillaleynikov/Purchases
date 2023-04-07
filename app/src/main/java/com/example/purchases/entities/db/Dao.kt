@@ -6,9 +6,9 @@ import androidx.room.Insert
 import com.example.purchases.entities.entitites.NoteItem
 import kotlinx.coroutines.flow.Flow
 
-@Dao
+@androidx.room.Dao
 interface Dao {
-    @Query("SELECT * FROM note_list")
+    @Query("SELECT * FROM NoteItem")
     fun getAllNotes(): Flow<List<NoteItem>>
 
     @Insert

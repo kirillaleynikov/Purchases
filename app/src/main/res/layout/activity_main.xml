@@ -6,12 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".entities.activities.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/placeHolder"
+        android:layout_width="410dp"
+        android:layout_height="674dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+    </FrameLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_menu" />
+        app:menu="@menu/bottom_menu" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
